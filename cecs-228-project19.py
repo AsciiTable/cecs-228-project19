@@ -1,1 +1,1 @@
-#Contributors: Linda Trinh, Hanson Nguyen, Bryan Vu, Jessica We
+#Contributors: Linda Trinh, Hanson Nguyen, Bryan Vu, Jessica Wei
