@@ -21,20 +21,24 @@ def quickSort(idArr, low, high):
 
 
 studentDict = {321: "Linda Trinh", 123: "Hanson Nguyen", 231: "Bryan Vu", 213: "Jessica Wei"}
-print("Unsorted Students by ID: ", studentDict) 
+last = len(studentDict) - 1
 idArray = []
+
+unsortedList = "Unsorted Students\n"
+
 for x in studentDict:
     idArray.append(x)
+    unsortedList = unsortedList + " " + str(x) + ": " + studentDict[x] + "\n"
+
+print(unsortedList)
 
 length = len(idArray)
 quickSort(idArray, 0, (length - 1))
 
-last = idArray[length - 1]
 
-sortedList = "Sorted Students by ID:";
+
+sortedList = "Sorted Students by ID:\n";
 for x in idArray:
-    sortedList = sortedList + " " + str(x) + ": "+ studentDict[x]
-    if x != last:
-        sortedList = sortedList + ","
+    sortedList = sortedList + " " + str(x) + ": "+ studentDict[x] + "\n"
 
 print(sortedList)
