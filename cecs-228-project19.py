@@ -31,7 +31,6 @@ def quickSort(idArr, low, high):
 
 
 studentDict = {321: "Linda Trinh", 123: "Hanson Nguyen", 231: "Bryan Vu", 213: "Jessica Wei"}
-last = len(studentDict) - 1
 idArray = []
 
 unsortedList = "Unsorted Students\n"
