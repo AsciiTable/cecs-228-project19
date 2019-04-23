@@ -18,7 +18,7 @@ def part(idArr, low, high):
     #returns the next index to be evaluated
     return(i+1)
 
-#Preforms the overall sort with recursion 
+#Performs the overall sort with recursion 
 def quickSort(idArr, low, high):
     #if the lower index is greater than the higher index
     if low < high:
