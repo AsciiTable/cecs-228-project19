@@ -30,9 +30,12 @@ def quickSort(idArr, low, high):
         quickSort(idArr, p1 + 1, high)
 
 
+import random
+
 studentDict = {321: "Linda Trinh", 123: "Hanson Nguyen", 231: "Bryan Vu", 213: "Jessica Wei"}
 idArray = []
 
+print("TEST 1 - 4 STUDENTS")
 unsortedList = "Unsorted Students\n"
 
 for x in studentDict:
@@ -50,3 +53,76 @@ for x in idArray:
     sortedList = sortedList + " " + str(x) + ": "+ studentDict[x] + "\n"
 
 print(sortedList)
+################################################################################################
+studentDict.clear();
+idArray.clear();
+
+print("TEST 2 - 10 STUDENTS")
+unsortedList = "Unsorted Students\n"
+
+count = 0
+while count < 10:
+    rID = random.randint(100,999)
+    check = 0
+    while check < len(idArray):
+        if idArray[check] == rID:
+            rID = random.randint(100,999)
+            check = 0
+        else:
+            check = check + 1
+    idArray.append(rID)
+    studentDict[rID] = "Student " + str(count + 1)
+    count = count + 1
+
+for x in studentDict:
+    unsortedList = unsortedList + " " + str(x) + ": " + studentDict[x] + "\n"
+
+print(unsortedList)
+
+length = len(idArray)
+quickSort(idArray, 0, (length - 1))
+
+
+sortedList = "Sorted Students by ID:\n";
+for x in idArray:
+    sortedList = sortedList + " " + str(x) + ": "+ studentDict[x] + "\n"
+
+print(sortedList)
+################################################################################################
+studentDict.clear();
+idArray.clear();
+
+print("TEST 3 - 20 STUDENTS")
+unsortedList = "Unsorted Students\n"
+
+count = 0
+while count < 20:
+    rID = random.randint(100,999)
+    check = 0
+    while check < len(idArray):
+        if idArray[check] == rID:
+            rID = random.randint(100,999)
+            check = 0
+        else:
+            check = check + 1
+    idArray.append(rID)
+    studentDict[rID] = "Student " + str(count + 1)
+    count = count + 1
+
+for x in studentDict:
+    unsortedList = unsortedList + " " + str(x) + ": " + studentDict[x] + "\n"
+
+print(unsortedList)
+
+length = len(idArray)
+quickSort(idArray, 0, (length - 1))
+
+
+sortedList = "Sorted Students by ID:\n";
+for x in idArray:
+    sortedList = sortedList + " " + str(x) + ": "+ studentDict[x] + "\n"
+
+print(sortedList)
+
+
+
