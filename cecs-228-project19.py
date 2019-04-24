@@ -47,7 +47,6 @@ print(unsortedList)
 length = len(idArray)
 quickSort(idArray, 0, (length - 1))
 
-
 sortedList = "Sorted Students by ID:\n";
 for x in idArray:
     sortedList = sortedList + " " + str(x) + ": "+ studentDict[x] + "\n"
@@ -82,7 +81,6 @@ print(unsortedList)
 length = len(idArray)
 quickSort(idArray, 0, (length - 1))
 
-
 sortedList = "Sorted Students by ID:\n";
 for x in idArray:
     sortedList = sortedList + " " + str(x) + ": "+ studentDict[x] + "\n"
@@ -116,7 +114,6 @@ print(unsortedList)
 
 length = len(idArray)
 quickSort(idArray, 0, (length - 1))
-
 
 sortedList = "Sorted Students by ID:\n";
 for x in idArray:
