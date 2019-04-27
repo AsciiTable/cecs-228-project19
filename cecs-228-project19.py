@@ -2,32 +2,32 @@
 #Contributors: Linda Trinh, Hanson Nguyen, Bryan Vu, Jessica Wei
 
 #Gets the two numbers in the range of the array to be compared
-def part(idArr, low, high):
-    i = (low - 1)
-    piv = idArr[high]
+def part(idArray, low, high):
+    index = (low - 1)
+    pivot = idArray[high]
 
     for z in range(low, high):
         #if a number from the higher index is less than or equal to the pivot point
-        if idArr[z] <= piv:
-            i = i + 1
+        if idArray[z] <= pivot:
+            index = index + 1
             #then swap the number with the number one index greater than the index last swapped
-            idArr[i],idArr[z] = idArr[z],idArr[i]
+            idArray[index],idArray[z] = idArray[z],idArray[index]
             
     #swap the next index with the highest index within the range
-    idArr[i + 1],idArr[high] = idArr[high],idArr[i + 1]
+    idArray[index + 1],idArray[high] = idArray[high],idArray[index + 1]
     #returns the next index to be evaluated
-    return(i+1)
+    return(index+1)
 
 #Performs the overall sort with recursion 
-def quickSort(idArr, low, high):
+def quickSort(idArray, low, high):
     #if the lower index is greater than the higher index
     if low < high:
         #Start comparing and/or sorting the indicies within the range
-        p1 = part(idArr, low, high)
+        partition = part(idArray, low, high)
         #Sorts the array between the low index to the next position to be evaluated
-        quickSort(idArr, low, p1 - 1)
+        quickSort(idArray, low, partition - 1)
         #Sorts the array between the next position to be evaluated to the high index
-        quickSort(idArr, p1 + 1, high)
+        quickSort(idArray, partition + 1, high)
 
 
 import random
